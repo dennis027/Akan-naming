@@ -5,25 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akans Naming</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
+    <div class="container">
     <h1>Akan Naming</h1>
     <h2>Welcome to Akans Naming Web application</h2>
     <p>This is a very interactive website that is allowing you to pop your date of birth and display your name</p>
     <p>This Application is helping Akan Naming so that they can know their real name since their naming system is dependent to days</p>
-    <p>Please fill the form below to know your name</p>
-    <p>Enter your century first numbers eg if 1999 add 19</p>
-    <p><input id="cc" ></p>
-    <p>Enter your year last numbers eg if 1999 add 99</p>
-    <p><input id="yy" ></p>
-    <p>Enter your birth month eg if novenber add 11</p>
-    <p><input id="mm" ></p>
-    <p>Enter your date of birth</p>
-    <p><input id="dd" ></p>
-    <p>Choose Gender</p>
-    <input class="Male" type="button" onclick="male()" value="Male">
-    <input class="Female" type="button" onclick="female()" value="Female">
-    <p>Your Akan Name is</p>
-    <input id="name">
+        <p><strong>Fill the form to get your <span>Akan</span> name:</strong></p>
+        <div class="card ">
+            <div class="card-body">
+
+        <form action="index.html">
+            <div class="form">
+                <label for="input-century-eg-19-for-1999 ">Century</label>
+                <input type="number" class="form" id="cc" required placeholder="Century"><br>
+            </div>
+            <div class="form">
+                <label for="input-Year-eg-10-for-2010">Year</label>
+                <input type="number" class="form" id="yy" required placeholder="Year"><br>
+            </div>
+            <div class="form">
+                <label for="input-Month-eg-10">Month</label>
+                <input type="number" class="form" id="mm" required placeholder="Month"><br>
+            </div>
+            <div class="form">
+                <label for="input-Day-eg-19">Day</label>
+                <input type="number" class="form" id="dd" required placeholder="Day"><br>
+            </div>
+            <div class="input">
+                <br><input type="radio" name="gender" class="name" id="input" value="male" required>Male
+            </div>
+            <div class="input">
+                <br><input type="radio" name="gender" class="name" id="input" value="female" required>Female
+            </div>
+            <button type="button" name="button" class="click" onclick="naming();">Get the Akan Name</button>
+        </form>
+        
+            </div>
+            </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
