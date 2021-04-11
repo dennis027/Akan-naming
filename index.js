@@ -15,5 +15,30 @@ function naming(){
 
   var gender = document.querySelector('input[name="gender"]:checked').value;
   var  dayOfTheWeek = parseInt( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
- 
+  
+  if(gender==="male") {
+    if(dayOfTheWeek===0){
+     
+      alert("Your Akan name is: " + maleNames[0]);
+    } else if(dayOfTheWeek===1){
+      
+      alert("Your Akan name is: " + maleNames[1]);
+    } else if(dayOfTheWeek===2){
+     
+      alert("Your Akan name is: " + maleNames[2]);
+    } else if(dayOfTheWeek===3){
+   
+      alert("Your Akan name is: " + maleNames[3]);
+    } else if(dayOfTheWeek===4){
+      
+      alert("Your Akan name is: " + maleNames[4]);
+    } else if(dayOfTheWeek===5){
+    
+      alert("Your Akan name is: " + maleNames[5]);
+    } else if(dayOfTheWeek===6){
+     
+      alert("Your Akan name is: " + maleNames[6]);
+    }
+
+  }
 }
