@@ -40,5 +40,28 @@ function naming(){
       alert("Your Akan name is: " + maleNames[6]);
     }
 
+  } else {
+     if(dayOfTheWeek===0){
+      
+      alert("Your Akan name is: " + femaleNames[0]);
+    } else if(dayOfTheWeek===1){
+      
+      alert("Your Akan name is: " + femaleNames[1]);
+    } else if(dayOfTheWeek===2){
+    
+      alert("Your Akan name is: " + femaleNames[2]);
+    } else if(dayOfTheWeek===3){
+    
+      alert("Your Akan name is: " + femaleNames[3]);
+    } else if(dayOfTheWeek===4){
+  
+      alert("Your Akan name is: " + femaleNames[4]);
+    } else if(dayOfTheWeek===5){
+     
+      alert("Your Akan name is: " + femaleNames[5]);
+    } else if(dayOfTheWeek===6){
+   
+      alert("Your Akan name is: " + femaleNames[6]);
+    }
   }
 }
