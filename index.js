@@ -1,9 +1,9 @@
 function naming(){
 
-  var CC=parseInt(document.getElementById("main").value);
-  var YY=parseInt(document.getElementById("name").value);
-  var MM=parseInt(document.getElementById("Form").value);
-  var DD=parseInt(document.getElementById("akan").value);
+  var CC=parseInt(document.getElementById("cc").value);
+  var YY=parseInt(document.getElementById("yy").value);
+  var MM=parseInt(document.getElementById("mm").value);
+  var DD=parseInt(document.getElementById("dd").value);
 
   var day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sartuday"];
   var femaleNames=["Akosua", "Adwoa","Abenaa","Akua","Yaa"," Afua","Ama"];
