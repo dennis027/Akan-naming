@@ -6,6 +6,16 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.card{
-    width: 30;
+.table,tr,td,th{
+    border: 2px solid pink;
+}
+.card-header{
+    background-color: blueviolet;
+}
+
+.card-body{
+    background-color: aqua;
+}
+.card-footer{
+    background-color: blueviolet;
 }
