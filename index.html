@@ -11,29 +11,76 @@
 
 </head>
 <body>
+    <br><br><br>
     <div class="container">
         <div class="card ">
+            <div class = "card-header">
     <h1>Akan Naming</h1>
     <h2>Welcome to Akans Naming Web application</h2>
     <p>This is a very interactive website that is allowing you to pop your date of birth and display your name</p>
     <p>This Application is helping Akan Naming so that they can know their real name since their naming system is dependent to days</p>
         <p><strong>Fill the form to get your <span>Akan</span> name:</strong></p>
-        
+             </div>
             <div class="card-body">
                 <div class ="row">
-                    <div class="col-md-8"
+                    <div class="col-md-5">
+                        <br>
+                    <table>
+                        <tr>
+                            <th>Day of the Week</th>
+                            <th>Female Name</th>
+                            <th>Male Name</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Akosua</td>
+                            <td>Kwasi</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td >Adwoa</td>
+                            <td>Kudwo</td>
+                        </tr>
+                        <tr>
+                            <td >Tuesday</td>
+                            <td>Abenaa</td>
+                            <td>Kwabena</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Akua</td>
+                            <td>Kwaku</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Yaa</td>
+                            <td>Yaw</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Afua</td>
+                            <td>Kofi</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Ama</td>
+                            <td>Kwame</td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="col-md-7">
                 <form id="form" name="form" onsubmit="findDay()">
                     <legend>Fill in to generate your Akan name:
                         <hr>
                     </legend>
                     <label for="year ">Year of birth</label>
-                    <input type="number" id="yy" name="year" min="1850" max="2021" required placeholder="Example: 1989">
+                    <input type="number" id="yy" name="year" min="1850" max="2021" required placeholder="Eg 1989">
 
                     <label for="month ">Month</label>
-                    <input type="number" id="mm" name="month" min="1" max="12" required placeholder="Example: December=12, May=5">
+                    <input type="number" id="mm" name="month" min="1" max="12" required placeholder="Eg May=5">
 
                     <label for="date ">Date</label>
-                    <input type="number" id="dd" name="date" min="1" max="31" required placeholder="Example: 21 ">
+                    <input type="number" id="dd" name="date" min="1" max="31" required placeholder="Eg 21">
 
                     <p>Select your gender: <br></p>
                     <div class="radio">
@@ -48,13 +95,17 @@
                         </label>
                     </div>
                     
+                    
                     </div>
 
                     <input type="submit" value="Submit">
                 </form>
                 </div>
-                </div>    
+               
+                </div>  
+                
             </div>
+            <div class="card-footer">Enjoy</div>  
             </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
