@@ -1,67 +1,27 @@
-function naming(){
 
-  var CC=parseInt(document.getElementById("cc").value);
-  var YY=parseInt(document.getElementById("yy").value);
-  var MM=parseInt(document.getElementById("mm").value);
-  var DD=parseInt(document.getElementById("dd").value);
-
-  var day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sartuday"];
-  var femaleNames=["Akosua", "Adwoa","Abenaa","Akua","Yaa"," Afua","Ama"];
-  var maleNames=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
- 
-  if(CC.value =="" || YY.value =="" || MM.value =="" || DD.value ==""){
-      alert("No blank values allowed");
-  }
-
-  var gender = document.querySelector('input[name="gender"]:checked').value;
-  var  dayOfTheWeek = parseInt( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
+var akan = function(y, m, d, g) {
+  var maleNames = ["Kwasi", "Kudwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
   
-  if(gender==="male") {
-    if(dayOfTheWeek===0){
-     
-      alert("Your Akan name is: " + maleNames[0]);
-    } else if(dayOfTheWeek===1){
-      
-      alert("Your Akan name is: " + maleNames[1]);
-    } else if(dayOfTheWeek===2){
-     
-      alert("Your Akan name is: " + maleNames[2]);
-    } else if(dayOfTheWeek===3){
-   
-      alert("Your Akan name is: " + maleNames[3]);
-    } else if(dayOfTheWeek===4){
-      
-      alert("Your Akan name is: " + maleNames[4]);
-    } else if(dayOfTheWeek===5){
-    
-      alert("Your Akan name is: " + maleNames[5]);
-    } else if(dayOfTheWeek===6){
-     
-      alert("Your Akan name is: " + maleNames[6]);
-    }
-
+  var d = new Date(y, --m, d);
+  if (g === "Male") {
+      return d && maleNames[d.getDay()];
   } else {
-     if(dayOfTheWeek===0){
-      
-      alert("Your Akan name is: " + femaleNames[0]);
-    } else if(dayOfTheWeek===1){
-      
-      alert("Your Akan name is: " + femaleNames[1]);
-    } else if(dayOfTheWeek===2){
-    
-      alert("Your Akan name is: " + femaleNames[2]);
-    } else if(dayOfTheWeek===3){
-    
-      alert("Your Akan name is: " + femaleNames[3]);
-    } else if(dayOfTheWeek===4){
-  
-      alert("Your Akan name is: " + femaleNames[4]);
-    } else if(dayOfTheWeek===5){
-     
-      alert("Your Akan name is: " + femaleNames[5]);
-    } else if(dayOfTheWeek===6){
-   
-      alert("Your Akan name is: " + femaleNames[6]);
-    }
+      return d && femaleNames[d.getDay()];
   }
 }
+
+
+$(document).ready(function() {
+  $("form#form").submit(function(event) {
+      event.preventDefault();
+      var y = parseInt($("#yy").val());
+      var m = parseInt($("#mm").val());
+      var d = parseInt($("#dd").val());
+      var g = $("input:radio[name=gender]:checked").val();
+      var result = akan(y, m, d, g);
+      alert("Your akan name is: " + result);
+      
+      document.getElementById("form").reset();
+  });
+});
